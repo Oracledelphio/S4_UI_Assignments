@@ -1,0 +1,12 @@
+.styled-button {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.styled-button:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
