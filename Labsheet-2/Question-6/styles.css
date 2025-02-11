@@ -1,0 +1,19 @@
+ul {
+    list-style-type: circle;
+}
+li a {
+    text-decoration: none;
+    font-style: italic;
+}
+a:link {
+    color: blue;
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    color: orange;
+}
+a:active {
+    color: red;
+}
