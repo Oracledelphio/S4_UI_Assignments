@@ -1,4 +1,4 @@
-# Operating Systems & Web Development Assignment  
+Web Development Assignment  
 
 ## Overview  
 This repository contains the solutions for the **Lab Sheet 3 Assignment**, covering multiple questions related to **HTML, CSS, and Web Development concepts**. The assignment includes topics such as form attributes, iframe functionality, responsive images, grid layouts, and website structuring.  
