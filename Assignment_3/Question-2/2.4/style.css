@@ -8,7 +8,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: .5fr 2fr .5fr; 
     gap: 5px;
     padding: 20px;
@@ -20,7 +20,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffa6cb;
+    background-color: #b6ffac;
     color: rgb(0, 0, 0);
     font-size: 24px;
     font-weight: bold;
@@ -28,17 +28,26 @@ body {
 }
 
 .box1 {
-    grid-column: span 3;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 5;
+    grid-row-end: 1;
 }
 
 .box2{
-    grid-column: span 1;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 4;
+    grid-row-end: 4;
 }
 
 .box3{
-    grid-column: span 2;
+    grid-column: span 1;
 }
 
 .box4 {
-    grid-column: span 3;
+    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-column-end: 5;
+    grid-row-end: 3;
 }

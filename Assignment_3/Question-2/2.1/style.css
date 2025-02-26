@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: white; /* White background */
+    background-color: white;
 }
 
 /* Grid Layout */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    grid-template-rows: auto; /* Auto adjust rows */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; 
     gap: 10px;
     padding: 20px;
     width: 97vw;
@@ -30,7 +30,6 @@ body {
     padding: 20px;
 }
 
-/* Specific Grid Placements */
 .box1 {
     grid-column: span 3;
 }
