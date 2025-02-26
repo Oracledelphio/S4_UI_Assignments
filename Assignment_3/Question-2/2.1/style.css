@@ -1,0 +1,44 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white; /* White background */
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: auto; /* Auto adjust rows */
+    gap: 10px;
+    padding: 20px;
+    width: 97vw;
+    height: 90vh;
+}
+
+/* Grid Box Styling */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #48ff51;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* Specific Grid Placements */
+.box1 {
+    grid-column: span 3;
+}
+
+.box2, .box3, .box4 {
+    grid-column: span 1;
+}
+
+.box5, .box6, .box7 {
+    grid-column: span 1;
+}
