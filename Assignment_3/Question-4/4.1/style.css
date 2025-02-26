@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .image-container img {
+        content: url('pixel-art-3.png');
+    }
+}
+@media (min-width: 1500px) {
+    .image-container img {
+        content: url('pixel-art-2.jpg');
+    }
+}
