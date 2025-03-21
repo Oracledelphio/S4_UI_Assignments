@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperature Categorization</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .result {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Temperature Categorization</h1>
+    <p>Enter the temperature to categorize it.</p>
+    <div class="result">
+      <script>
+        let temperature = parseFloat(prompt("Enter the temperature:"));
+        let category;
+
+        if (temperature < 0) {
+          category = "Freezing";
+        } else if (temperature >= 0 && temperature <= 15) {
+          category = "Cold";
+        } else if (temperature >= 16 && temperature <= 30) {
+          category = "Moderate";
+        } else {
+          category = "Hot";
+        }
+
+        console.log("Category: " + category);
+        alert("Category: " + category);
+        document.write("Temperature Category: " + category);
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Days Until New Year</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .result {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Days Until Next New Year</h1>
+    <p>Calculate the number of days left until the next New Year.</p>
+    <div class="result">
+      <script>
+        let today = new Date();
+        let nextYear = new Date(today.getFullYear() + 1, 0, 1);
+        let timeDiff = nextYear - today;
+        let daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+        console.log("Days left until next New Year: " + daysLeft);
+        alert("Days left until next New Year: " + daysLeft);
+        document.write("Days left until next New Year: " + daysLeft);
+      </script>
+    </div>
+  </body>
+</html>

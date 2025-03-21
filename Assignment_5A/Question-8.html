@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random and Fibonacci</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .result {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Number and Fibonacci Sequence</h1>
+    <p>Generate a random number and print Fibonacci numbers below it.</p>
+    <div class="result">
+      <script>
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
+        console.log("Random number between 1 and 10: " + randomNumber);
+
+        let fibonacci = [0, 1];
+        while (fibonacci[fibonacci.length - 1] < randomNumber) {
+          fibonacci.push(
+            fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2]
+          );
+        }
+
+        console.log(
+          "Fibonacci numbers below " +
+            randomNumber +
+            ": " +
+            fibonacci.slice(0, -1).join(", ")
+        );
+        document.write("Random number: " + randomNumber + "<br>");
+        document.write(
+          "Fibonacci numbers below " +
+            randomNumber +
+            ": " +
+            fibonacci.slice(0, -1).join(", ")
+        );
+      </script>
+    </div>
+  </body>
+</html>

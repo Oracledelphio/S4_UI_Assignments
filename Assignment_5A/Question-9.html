@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find Highest Value in an Array</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .result {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      input {
+        padding: 5px;
+        margin: 5px;
+      }
+      button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Find Highest Value in an Array</h1>
+    <p>Enter numbers separated by commas (e.g., 10, 20, 30):</p>
+    <input type="text" id="arrayInput" placeholder="Enter numbers" />
+    <button onclick="findHighest()">Find Highest Value</button>
+    <div class="result" id="result"></div>
+
+    <script>
+      function findHighest() {
+        let input = document.getElementById("arrayInput").value;
+        let array = input.split(",").map(Number);
+
+        let highestValue = Math.max(...array);
+
+        document.getElementById("result").innerHTML =
+          "Array: " +
+          array.join(", ") +
+          "<br>" +
+          "Highest value: " +
+          highestValue;
+      }
+    </script>
+  </body>
+</html>

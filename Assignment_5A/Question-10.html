@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Books</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .result {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Books Information</h1>
+    <p>Display books with cost > 500 and find a book by Mahatma Gandhi.</p>
+    <div class="result">
+      <script>
+        let books = [
+          { title: "Book1", author: "Author1", cost: 450 },
+          { title: "Book2", author: "Mahatma Gandhi", cost: 600 },
+          { title: "Book3", author: "Author3", cost: 550 },
+        ];
+
+        let expensiveBooks = books.filter((book) => book.cost > 500);
+        console.log("Books with cost > 500:");
+        document.write("<strong>Books with cost > 500:</strong><br>");
+        expensiveBooks.forEach((book) => document.write(book.title + "<br>"));
+
+        let gandhiBook = books.find((book) => book.author === "Mahatma Gandhi");
+        if (gandhiBook) {
+          console.log("Book by Mahatma Gandhi: " + gandhiBook.title);
+          document.write(
+            "<br><strong>Book by Mahatma Gandhi:</strong> " + gandhiBook.title
+          );
+        } else {
+          console.log("No book found by Mahatma Gandhi");
+          document.write("<br>No book found by Mahatma Gandhi");
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Factorial</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .result {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Factorial Calculator</h1>
+    <p>Enter a number to calculate its factorial.</p>
+    <div class="result">
+      <script>
+        function factorial(num) {
+          if (num === 0 || num === 1) return 1;
+          for (let i = num - 1; i >= 1; i--) {
+            num *= i;
+          }
+          return num;
+        }
+
+        let number = parseInt(prompt("Enter a number:"));
+        let result = factorial(number);
+        console.log("Factorial: " + result);
+        alert("Factorial: " + result);
+        document.write("Factorial of " + number + " is: " + result);
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current Date</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .result {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Current Date</h1>
+    <p>Display today's date in a specific format.</p>
+    <div class="result">
+      <script>
+        let today = new Date();
+        let options = { day: "numeric", month: "long", year: "numeric" };
+        let formattedDate = today.toLocaleDateString("en-UK", options);
+
+        console.log("Today's date is: " + formattedDate);
+        document.write("Today's date is: " + formattedDate);
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capitalize First Letter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .result {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Capitalize First Letter</h1>
+    <p>Enter a sentence to capitalize the first letter of each word.</p>
+    <div class="result">
+      <script>
+        function capitalizeFirstLetter(sentence) {
+          return sentence
+            .split(" ")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+        }
+
+        let sentence = prompt("Enter a sentence:");
+        let capitalizedSentence = capitalizeFirstLetter(sentence);
+        console.log(capitalizedSentence);
+        alert(capitalizedSentence);
+        document.write("Capitalized Sentence: " + capitalizedSentence);
+      </script>
+    </div>
+  </body>
+</html>
