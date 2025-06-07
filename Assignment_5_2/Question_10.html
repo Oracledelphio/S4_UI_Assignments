@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reveal Button Names</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fce4ec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #ec407a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #d81b60;
+      }
+      #selection {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Click a Button</h2>
+      <button onclick="showSelection('HTML')">HTML</button>
+      <button onclick="showSelection('Javascript')">Javascript</button>
+      <button onclick="showSelection('CSS')">CSS</button>
+      <div id="selection"></div>
+    </div>
+    <script>
+      function showSelection(name) {
+        document.getElementById(
+          "selection"
+        ).textContent = `You have selected ${name}`;
+      }
+    </script>
+  </body>
+</html>

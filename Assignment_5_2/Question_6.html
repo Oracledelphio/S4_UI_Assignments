@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f8e9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px;
+        background-color: #ff9800;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #fb8c00;
+      }
+      #message {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Student Registration Form</h2>
+      <input type="text" id="name" placeholder="Name of Student" />
+      <input type="text" id="mobile" placeholder="Mobile No" />
+      <input type="text" id="pin" placeholder="Pin Code" />
+      <button onclick="validateForm()">Submit</button>
+      <div id="message"></div>
+    </div>
+    <script>
+      function validateForm() {
+        let name = document.getElementById("name").value.trim();
+        let mobile = document.getElementById("mobile").value.trim();
+        let pin = document.getElementById("pin").value.trim();
+        let message = "";
+
+        if (!name || !mobile || !pin) {
+          message += "All fields are required.<br>";
+        }
+        if (!/^[a-zA-Z\s]+$/.test(name)) {
+          message += "Name should contain only alphabets and spaces.<br>";
+        }
+        if (!/^\d{10}$/.test(mobile)) {
+          message += "Mobile number should be exactly 10 digits.<br>";
+        }
+        if (!/^\d{6}$/.test(pin)) {
+          message += "Pin code should be exactly 6 digits.<br>";
+        }
+
+        document.getElementById("message").innerHTML =
+          message || "Form submitted successfully!";
+        document.getElementById("message").style.color = message
+          ? "#d32f2f"
+          : "#4CAF50";
+      }
+    </script>
+  </body>
+</html>

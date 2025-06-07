@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Categorization</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e0f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input,
+      button {
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+      }
+      button {
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #1e88e5;
+      }
+      #category {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Temperature Categorization</h2>
+      <input type="number" id="tempInput" placeholder="Enter temperature" />
+      <button onclick="categorizeTemperature()">Categorize</button>
+      <div id="category"></div>
+    </div>
+    <script>
+      function categorizeTemperature() {
+        let temp = parseFloat(document.getElementById("tempInput").value);
+        let category;
+        if (temp < 0) {
+          category = "Freezing";
+        } else if (temp >= 0 && temp <= 15) {
+          category = "Cold";
+        } else if (temp > 15 && temp <= 30) {
+          category = "Moderate";
+        } else {
+          category = "Hot";
+        }
+        document.getElementById(
+          "category"
+        ).textContent = `The temperature is ${category}.`;
+      }
+    </script>
+  </body>
+</html>

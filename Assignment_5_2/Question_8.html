@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Button</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fff9c4;
+      }
+      button {
+        padding: 15px 30px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #f57c00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #e65100;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="toggleButton">Show</button>
+    <script>
+      document
+        .getElementById("toggleButton")
+        .addEventListener("click", function () {
+          this.textContent = this.textContent === "Show" ? "Hide" : "Show";
+        });
+    </script>
+  </body>
+</html>
